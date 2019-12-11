@@ -12,7 +12,11 @@ let database = [
 
   getInfo.addEventListener('click', function(event){
   event.preventDefault();
-  checkingInputFields();
+  let   incorrectEmail = document.getElementById("incorrectEmail"),
+        incorrectPass = document.getElementById("incorrectPass");
+        incorrectEmail.style.display = "";
+        incorrectPass.style.display = "";
+        checkingInputFields();
   
  });
 
@@ -31,23 +35,18 @@ let database = [
 
       console.log(regEmail.test(email));
       console.log(regPass.test(pass));
-
+      
+      if (regPass.test(pass) == true && regEmail.test(email) == true){
+        checkingItemsInDataBase();
+      }
       if(regEmail.test(email) == false){
         incorrectEmail.style.display = "block";
       }
       if(regPass.test(pass) == false){
         incorrectPass.style.display = "block";
       }
-
-      // if (regEmail.test(email) == true){
-      //   incorrectEmail.style.display = "";
-      // }
-      // if (regPass.test(pass) == true){
-      //   incorrectPass.style.display = "";
-      // }
-      if (regPass.test(pass) == true && regPass.test(pass) == true){
-        checkingItemsInDataBase();
-      }
+     
+     
  }
 
  function checkingItemsInDataBase() {
@@ -71,6 +70,8 @@ let database = [
 
       if (remEmail == remPass && remEmail!=undefined && remPass !=undefined){
         console.log("Есть такой в базе");
+        localStorage.setItem(email,pass);
+        document.location.href = 'userPage.html';
       }
       else{
         incorrectPerson.style.display = "block";
