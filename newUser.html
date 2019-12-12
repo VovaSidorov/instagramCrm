@@ -13,12 +13,46 @@
     <ul class="nav nav-pills" id="navigation">
     </ul>
   </nav>
-  <div class="containet">
+  <div class="container">
     <div class="row my-4">
       <div class="col">
         <h1 id="h1"></h1>
       </div>
     </div>
+</div>
+<div class="container">
+    <form class="top-cover"> 
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+    </div>
+    <input type="email" class="form-control"  id="createUserMail" placeholder="Enter email">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+    </div>
+    <input type="text" class="form-control"  placeholder="Enter password" id="createUserPass">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Enter Name" id="createUserName">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGroupSelect01">Role</label>
+    </div>
+    <select class="custom-select" id="createUserRole">
+      <option selected>Choose...</option>
+      <option value="Admin">Admin</option>
+      <option value="Manager">Manager</option>
+      <option value="Executor">Executor</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-primary" id="btnCreateNewUser">Add user</button>
+  </form>
 </div>
 
    

@@ -4,7 +4,7 @@
 
 //  if (item == 0){
 //   document.location.href = 'index.html';
-//  }
+//  } 
 
 var li, a, h1, tr,th, td;
 var navigation = document.getElementById("navigation");
@@ -17,12 +17,12 @@ var names = [
                {"name":"Create order","href":"newOrder.html"},
                {"name":"Order page","href":"orderPage.html"},
                {"name":"Users page","href":"userPage.html"},
-               {"name":"Exit","href":"index.html"},
+               {"name":"Exit","href":"index.html"}
              ];
 
 let database = [
               {id:1, login:"Andrey",email:"andrey@gmail.com",pass:"22Andrey",role:"Admin"},
-              {id:2, login:"Sergey",email:"sergey@gmail.com",pass:"Sergey33",role:"Menager"},
+              {id:2, login:"Sergey",email:"sergey@gmail.com",pass:"Sergey33",role:"Manager"},
               {id:3, login:"anton",email:"anton@gmail.com",pass:"24Anton789",role:"Executor"},
               {id:4, login:"Leva",email:"leva@gmail.com",pass:"Privet",role:"Executor"}
             ];    
@@ -37,8 +37,7 @@ let ordersBase = [
               {id:4, accountname:"Alisa",orderDescription:"Куртка зимняя",
               price:2720,orderStatus:"New",orderPrice:"Paid"},
               {id:5, accountname:"reoma46588",orderDescription:"покрышки",
-              price:785,orderStatus:"New",orderPrice:"Paid"},
-      
+              price:785,orderStatus:"New",orderPrice:"Paid"}      
             ];            
              
 if (document.location.href.indexOf('users') != -1){
@@ -124,6 +123,33 @@ document.location.href = 'index.html';
 localStorage.clear();
 
  });
+
+
+//  Createuser page
+if (document.location.href.indexOf('newUser') != -1){
+let newUsermail, newUserPass, newUserName, newUserRole, btnCreateNewUser;
+
+btnCreateNewUser = document.getElementById('btnCreateNewUser');
+
+btnCreateNewUser.addEventListener('click', function(event){
+event.preventDefault();
+
+newUsermail = document.getElementById("createUserMail").value;
+newUserPass = document.getElementById("createUserPass").value;
+newUserName = document.getElementById("createUserName").value;
+newUserRole = document.getElementById("createUserRole");
+let newUserRoleVal = newUserRole.options[newUserRole.selectedIndex].value;
+
+  console.log(newUsermail);
+  console.log(newUserPass);
+  console.log(newUserName);
+  console.log(newUserRoleVal);
+  database.push({id:5, login:newUserName,email:newUsermail,pass:newUserPass,role:newUserRoleVal});
+  console.log(database);
+
+
+});
+}
 
 
 
