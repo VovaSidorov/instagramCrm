@@ -6,7 +6,7 @@
 //   document.location.href = 'index.html';
 //  } 
 
-var li, a, h1, tr,th, td,button,modalClose;
+var li, a, h1, tr,th, td,button,modalClose,saveChanges,target;
 var navigation = document.getElementById("navigation");
 var users = document.getElementById("users");
 var orders = document.getElementById("orders");
@@ -70,7 +70,7 @@ users.appendChild(tr);
 
 button.addEventListener('click', function(event){
   event.preventDefault();
-  let target = event.target.id;
+  target = event.target.id;
   let modal = document.getElementById('modal');
   let editUsermail, editUserPass, editUserName, editUserRole;
   editUsermail = document.getElementById("editUsermail");
@@ -94,8 +94,23 @@ button.addEventListener('click', function(event){
   modal.style.display = 'none';
   document.body.style.overflow='';
   });
+  
+  saveChanges = document.getElementById('saveUsersChanges');
 
+  saveChanges.addEventListener('click', function(){
+ 
+ 
+  database[target-1].email = editUsermail.value;
+  database[target-1].pass = editUserPass.value;
+  database[target-1].login = editUserName.value;
+  database[target-1].role = editUserRole.value;
 
+  console.log(database[target].email);
+  modal.style.display = 'none';
+  document.body.style.overflow='';
+  console.log(database);
+  location.href=location.href;
+  });
 
  }
 }
