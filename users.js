@@ -6,7 +6,7 @@
 //   document.location.href = 'index.html';
 //  } 
 
-var li, a, h1, tr,th, td;
+var li, a, h1, tr,th, td,button,modalClose;
 var navigation = document.getElementById("navigation");
 var users = document.getElementById("users");
 var orders = document.getElementById("orders");
@@ -41,7 +41,6 @@ let ordersBase = [
             ];            
              
 if (document.location.href.indexOf('users') != -1){
-
  for (var i=0;i<database.length;i++){
 tr = document.createElement('tr');
 th = document.createElement('th');
@@ -49,7 +48,10 @@ tdEmail = document.createElement('td');
 tdPass = document.createElement('td');
 tdLogin = document.createElement('td');
 tdRole = document.createElement('td');
-
+button = document.createElement("button");
+button.id = database[i].id;
+button.classList.add("btn");
+button.classList.add("btn-primary");
 th.innerHTML = database[i].id;
 tr.appendChild(th)
 
@@ -57,12 +59,44 @@ tdEmail.innerHTML = database[i].email;
 tdPass.innerHTML = database[i].pass;
 tdLogin.innerHTML = database[i].login;
 tdRole.innerHTML = database[i].role;
+button.innerHTML = "edit";
 
 tr.appendChild(tdEmail);
 tr.appendChild(tdPass);
 tr.appendChild(tdLogin);
 tr.appendChild(tdRole);
+tr.appendChild(button);
 users.appendChild(tr);
+
+button.addEventListener('click', function(event){
+  event.preventDefault();
+  let target = event.target.id;
+  let modal = document.getElementById('modal');
+  let editUsermail, editUserPass, editUserName, editUserRole;
+  editUsermail = document.getElementById("editUsermail");
+  editUserPass = document.getElementById("editUserPass");
+  editUserName = document.getElementById("editUserName");
+  editUserRole = document.getElementById("editUserRole");
+
+  editUsermail.value = database[target-1].email;
+  editUserPass.value = database[target-1].pass;
+  editUserName.value = database[target-1].login;
+  editUserRole.value = database[target-1].role;
+  modal.style.display = 'block';
+  document.body.style.overflow='hidden';
+   });
+
+  modalClose = document.getElementById('modalClose');
+
+  modalClose.addEventListener('click', function(event){
+  event.preventDefault();
+
+  modal.style.display = 'none';
+  document.body.style.overflow='';
+  });
+
+
+
  }
 }
 
