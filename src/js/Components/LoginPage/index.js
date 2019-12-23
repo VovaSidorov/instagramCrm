@@ -4,10 +4,6 @@ import GroupPassword from "./password";
 import CheckBox from "./checkbox";
 import btnEnter from "./buttons";
 
-import users from "../../users";
-
-console.log(users);
-
 import './style.scss';
 
 const div = getHtmlObject("div");
@@ -37,20 +33,5 @@ const loginPage = div.createHtmlElement(
     [row]
 );
 
-export default loginPage; 
+export default loginPage;
 
-{/* <div class="container ">
-<div class="row justify-content-center centrBlock">
-  <div class="col-4 align-middle">
-    <form class="top-cover"> 
-  
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-      <button type="submit" class="btn btn-primary" id="btn">Enter</button>
-      <button type="submit" class="btn btn-primary" id="more">Registration</button>
-    </form>
-  </div>
-</div>
-</div> */}
