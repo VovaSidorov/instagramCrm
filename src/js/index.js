@@ -1,10 +1,11 @@
 console.log("App was load ...");
 import render from './lib/renderHtml';
-import _loginPage from './Components/LoginPage';
+import loginPage from './Components/LoginPage';
 
-const LoginPage = _loginPage();
+console.log(loginPage);
 
-render("app", LoginPage);
+
+render("app", loginPage);
 
 
 

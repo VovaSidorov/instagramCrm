@@ -7,7 +7,11 @@ import Nav from "./Nav";
 import Li from "./Li";
 import Ul from "./Ul";
 import Span from "./Span";
-import H5 from "./H5"
+import H5 from "./H5";
+import Form from "./Form"
+import Input from "./Input";
+import Small from "./Small";
+import Label from "./Label";
 
 export default function (tag) {
     switch (tag) {
@@ -29,6 +33,14 @@ export default function (tag) {
             return new Ul();
         case "h5":
             return new H5();
+        case "form":
+            return new Form();
+        case "input":
+            return new Input();  
+        case "label":
+            return new Label();  
+        case "small":
+            return new Small();      
         default:
             return new Div();
     }
