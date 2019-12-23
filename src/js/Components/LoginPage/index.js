@@ -4,6 +4,10 @@ import GroupPassword from "./password";
 import CheckBox from "./checkbox";
 import btnEnter from "./buttons";
 
+import users from "../../users";
+
+console.log(users);
+
 import './style.scss';
 
 const div = getHtmlObject("div");
