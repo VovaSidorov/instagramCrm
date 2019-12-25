@@ -1,9 +1,9 @@
 import validationForm from "./validationForm";
 import checkDataBaseUser from "./CheckDataBaseUser";
-import header from '../Components/Header';
-import render from '../lib/renderHtml';
+import header from '../../Components/Header';
+import render from '../../lib/renderHtml';
 
-import users from "../users"
+import users from "../../users"
 
 
 export default () => {

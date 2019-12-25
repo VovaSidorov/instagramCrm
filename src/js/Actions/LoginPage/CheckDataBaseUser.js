@@ -1,7 +1,3 @@
-import render from '../lib/renderHtml';
-import header from '../Components/Header';
-
-
 export default (formDataResults,users) => {
     console.log(formDataResults);
     console.log(users);
@@ -22,10 +18,6 @@ export default (formDataResults,users) => {
     });
 
     if (remEmail == remPass && remEmail!=undefined && remPass !=undefined){
-        // document.getElementById("app").innerHTML = "";
-        // console.log("есть а базе");
-        // return render("app", header);
-        // console.log("есть а базе");
         return true;
     }
     else{
