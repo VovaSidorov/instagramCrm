@@ -12,6 +12,10 @@ import Form from "./Form"
 import Input from "./Input";
 import Small from "./Small";
 import Label from "./Label";
+import Table from "./Table";
+import Thead from "./Thead";
+import Tr from "./Tr";
+import Th from "./Th";
 
 export default function (tag) {
     switch (tag) {
@@ -40,7 +44,15 @@ export default function (tag) {
         case "label":
             return new Label();  
         case "small":
-            return new Small();      
+            return new Small();    
+        case "table":
+            return new Table();
+        case "thead":
+            return new Thead();
+        case "th":
+            return new Th();
+        case "tr":
+            return new Tr();          
         default:
             return new Div();
     }

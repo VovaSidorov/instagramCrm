@@ -5,7 +5,6 @@ import render from '../../lib/renderHtml';
 
 import users from "../../users"
 
-
 export default () => {
 document.getElementById("btn")
 .addEventListener('click', function(event){
