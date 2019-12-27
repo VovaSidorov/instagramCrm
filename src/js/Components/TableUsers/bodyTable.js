@@ -1,4 +1,5 @@
 import getHtmlObject from "../../lib/FactoryHtml";
+import users from "../../users";
 
 const tbody = getHtmlObject("tbody");
 const tr = getHtmlObject("tr");
@@ -6,6 +7,8 @@ const th = getHtmlObject("th");
 
 const nameTable = ["#","name","Email","Password","Role"]
 
+
+console.log(users);
 
 // const trList = nameTable.map(el => tr.createHtmlElement(
 //     "",

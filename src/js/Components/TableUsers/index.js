@@ -11,7 +11,7 @@ const table = getHtmlObject("table");
 const tableUser = table.createHtmlElement(
     "table table-striped",
     null,
-    [theadTable,bodyTable]
+    [theadTable(),bodyTable]
 );
 
 const tableDiv = div.createHtmlElement(
@@ -21,16 +21,5 @@ const tableDiv = div.createHtmlElement(
 );
 
 export default tableDiv;
-
-{/* <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-     
-    </tbody> */}
 
 
