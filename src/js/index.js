@@ -5,7 +5,7 @@ import tableUsers from './Components/TableUsers';
 import actionBtnLogin from './Actions/LoginPage/actionBtnLogin';
 
 render("app", loginPage);
-render("app", tableUsers);
+// render("app", tableUsers);
 
 actionBtnLogin();
 

@@ -17,6 +17,7 @@ import Thead from "./Thead";
 import Tr from "./Tr";
 import Th from "./Th";
 import Tbody from "./Tbody";
+import Td from "./Td";
 
 export default function (tag) {
     switch (tag) {
@@ -55,7 +56,9 @@ export default function (tag) {
         case "tr":
             return new Tr();
         case "tbody":
-                return new Tbody();                
+            return new Tbody();
+        case "td":
+            return new Td();                  
         default:
             return new Div();
     }
