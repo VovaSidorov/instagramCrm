@@ -8,13 +8,13 @@ const li = getHtmlObject('li');
 const div = getHtmlObject('div');
 
 const navLinks = [
-    {name: "Users", attr: [{name: "href", value: "/"}]},
-    {name: "Orders", attr: [{name: "href", value: "/"}]},
-    {name: "Create user", attr: [{name: "href", value: "/"}]},
-    {name: "Create order", attr: [{name: "href", value: "/"}]},
-    {name: "Order page", attr: [{name: "href", value: "/"}]},
-    {name: "Users page", attr: [{name: "href", value: "/"}]},
-    {name: "Exit", attr: [{name: "href", value: "/"}]},
+    {name: "Users", attr: [{name: "id", value: "pageUsers"}]},
+    {name: "Orders", attr: [{name: "href", value: "/"},{name: "id", value: "pageOrders"}]},
+    {name: "Create user", attr: [{name: "href", value: "/"},{name: "id", value: "pageCrUser"}]},
+    {name: "Create order", attr: [{name: "href", value: "/"},{name: "id", value: "pageCrOrder"}]},
+    {name: "Order page", attr: [{name: "href", value: "/"},{name: "id", value: "OrderPage"}]},
+    {name: "Users page", attr: [{name: "href", value: "/"},{name: "id", value: "Userpage"}]},
+    {name: "Exit", attr: [{name: "href", value: "/"},{name: "id", value: "Exit"}]},
 ];
 
 const navItems = navLinks.map((el) =>
