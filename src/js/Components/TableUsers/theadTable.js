@@ -13,14 +13,21 @@ const createTr = (el) => {
     );
 };
 
-
 export default () => {
-    const nameTable = ["#","name","Email","Password","Role"];
-    const thList = nameTable.map(el => {
+    const nameTable = [
+        {title:"#"},
+        {title:"name"},
+        {title:"Email"},
+        {title:"Password"},
+        {title:"Role"}
+    ];
+  
+    const thList = nameTable.map((el,i) => {
+
         return th.createHtmlElement(
             "",
             null,
-            [createTr(el)]
+            [createTr(nameTable[i].title)]
         )
     });
 

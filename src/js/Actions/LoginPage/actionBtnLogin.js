@@ -1,6 +1,7 @@
 import validationForm from "./validationForm";
 import checkDataBaseUser from "./CheckDataBaseUser";
 import header from '../../Components/Header';
+import tableUsers from '../../Components/TableUsers';
 import render from '../../lib/renderHtml';
 
 import users from "../../users"
@@ -22,7 +23,8 @@ document.getElementById("btn")
     if (b==true){
         console.log("Есть в базе");
         document.getElementById("app").innerHTML = "";
-        render("app", header)
+        render("app", header);
+        render("app", tableUsers);
     }
     if (b==false){
         console.log("нет в базе");
