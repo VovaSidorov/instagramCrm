@@ -1,15 +1,15 @@
 import header from '../../Components/Header';
-import tableUsers from '../../Components/TableUsers';
+import tableOrders from '../../Components/TableOrders';
 import render from '../../lib/renderHtml';
 
 
 export default () => {
-document.getElementById("pageUsers")
+document.getElementById("pageOrders")
 .addEventListener('click', function(event){
     event.preventDefault();
     document.getElementById("app").innerHTML = "";
     render("app", header);
-    render("app", tableUsers);
-    console.log("table users");
+    render("app", tableOrders);
+    console.log("table orders");
 });
 }

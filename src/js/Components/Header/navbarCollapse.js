@@ -9,7 +9,7 @@ const div = getHtmlObject('div');
 
 const navLinks = [
     {name: "Users", attr: [{name: "id", value: "pageUsers"}]},
-    {name: "Orders", attr: [{name: "href", value: "/"},{name: "id", value: "pageOrders"}]},
+    {name: "Orders", attr: [{name: "id", value: "pageOrders"}]},
     {name: "Create user", attr: [{name: "href", value: "/"},{name: "id", value: "pageCrUser"}]},
     {name: "Create order", attr: [{name: "href", value: "/"},{name: "id", value: "pageCrOrder"}]},
     {name: "Order page", attr: [{name: "href", value: "/"},{name: "id", value: "OrderPage"}]},

@@ -4,6 +4,7 @@ import header from '../../Components/Header';
 import tableUsers from '../../Components/TableUsers';
 import render from '../../lib/renderHtml';
 import actionBtnUser from '../../Actions/TableUsers/actionBtnUser';
+import actionBtnOrders from '../../Actions/TableOrders/actionBtnOrders';
 
 import users from "../../users"
 
@@ -26,7 +27,8 @@ document.getElementById("btn")
         document.getElementById("app").innerHTML = "";
         render("app", header);
         render("app", tableUsers);
-        actionBtnUser();``
+        actionBtnUser();
+        actionBtnOrders();
     }
     if (b==false){
         console.log("нет в базе");
