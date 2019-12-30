@@ -8,7 +8,6 @@ const div = getHtmlObject("div");
 const td = getHtmlObject("td");
 
 const createTr = ({id,accountname,orderDescription,price,orderStatus,orderPrice}) => {
- console.log(id);
     const trId = th.createHtmlElement(
         "",
         [{name:"scope",value:"row"}],

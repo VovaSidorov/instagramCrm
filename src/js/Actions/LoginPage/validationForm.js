@@ -7,8 +7,6 @@ pass=document.getElementById("password").value,
 incorrectEmail = document.getElementById("incorrectEmail"),
 incorrectPass = document.getElementById("incorrectPass");
 
-console.log(regEmail.test(email));
-console.log(regPass.test(pass));
 
 if (regPass.test(pass) == true && regEmail.test(email) == true){
   let obj = {email:email,pass:pass};

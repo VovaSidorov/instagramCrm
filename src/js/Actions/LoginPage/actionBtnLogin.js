@@ -7,6 +7,8 @@ import actionBtnUser from '../../Actions/TableUsers/actionBtnUser';
 import actionBtnOrders from '../../Actions/TableOrders/actionBtnOrders';
 
 import users from "../../users"
+import actionAddNewUser from "../TableUsers/actionAddNewUser";
+import actionModalClose from "../TableUsers/actionModalClose";
 
 export default () => {
 document.getElementById("btn")
@@ -23,12 +25,12 @@ document.getElementById("btn")
         b = checkDataBaseUser(formDataResults, users);
     }
     if (b==true){
-        console.log("Есть в базе");
         document.getElementById("app").innerHTML = "";
         render("app", header);
         render("app", tableUsers);
         actionBtnUser();
         actionBtnOrders();
+        actionAddNewUser();
     }
     if (b==false){
         console.log("нет в базе");

@@ -1,13 +1,12 @@
 export default (formDataResults,users) => {
-    console.log(formDataResults);
-    console.log(users);
+
     let remEmail, remPass,
         incorrectPerson = document.getElementById("incorrectPerson");
 
     users.forEach(element =>{
         if (formDataResults.email == element.email){
             remEmail = element.id;
-            console.log()
+
         }
     });
 

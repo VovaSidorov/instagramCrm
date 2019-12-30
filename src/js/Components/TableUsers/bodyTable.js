@@ -8,7 +8,6 @@ const div = getHtmlObject("div");
 const td = getHtmlObject("td");
 
 const createTr = ({id,login,email,pass,role}) => {
- console.log(id);
     const divId = th.createHtmlElement(
         "",
         [{name:"scope",value:"row"}],

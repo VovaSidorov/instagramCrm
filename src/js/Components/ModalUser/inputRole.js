@@ -5,53 +5,34 @@ const label = getHtmlObject("label");
 const select = getHtmlObject("select");
 const option = getHtmlObject("option");
 
+const optionAdmin = option.createHtmlElement(
+    "",
+    [{name:"value",value:"Admin"}],
+    "Admin"
+);
 
-const options = ["Admin","Menager","Executor"];
+const optionMenager= option.createHtmlElement(
+    "",
+    [{name:"value",value:"Menager"}],
+    "Menager"
+);
 
-const createOption = (el) => {
-    console.log(el);
-    return option.createHtmlElement(
-        "",
-        null,
-       'vova'
-    );
-};
-
-const optionsList = options.map((el,i) => {
-    console.log(el);
-    return createOption(el)
-});
-
-console.log(createOption("VOva"));
-
-// const opti console.log(el);onAdmin = option.createHtmlElement(
-//     "",
-//     [{name:"value",value:"Admin"}],
-//     "Admin"
-// );
-//
-// const optionMenager= option.createHtmlElement(
-//     "",
-//     [{name:"value",value:"Menager"}],
-//     "Menager"
-// );
-//
-// const optionExecutor = option.createHtmlElement(
-//     "",
-//     [{name:"value",value:"Executor"}],
-//     "Executor"
-// );
+const optionExecutor = option.createHtmlElement(
+    "",
+    [{name:"value",value:"Executor"}],
+    "Executor"
+);
 
 const selectRole = select.createHtmlElement(
     "custom-select",
     [{name:"id",value:"editUserRole"}],
-    [optionsList]
+    [optionAdmin,optionMenager,optionExecutor]
 );
 
 const labelInput = label.createHtmlElement(
     "input-group-text",
     [{name:"for",value:"inputGroupSelect01"}],
-     "Role"
+    "Role"
 );
 
 const inputGroupPrepend = div.createHtmlElement(

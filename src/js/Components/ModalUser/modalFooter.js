@@ -18,6 +18,7 @@ const btnClose = button.createHtmlElement(
     [
         {name:"type",value:"button"},
         {name:"data-dismiss",value:"modal"},
+        {name:"id",value:"modalClose"},
     ],
     "Close"
 );

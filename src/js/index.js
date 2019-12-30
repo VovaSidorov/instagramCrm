@@ -6,9 +6,7 @@ import actionBtnLogin from './Actions/LoginPage/actionBtnLogin';
 
 
 render("app", loginPage);
-render("app", ModalUser);
-
-
+// render("app", ModalUser);
 
 actionBtnLogin();
 

@@ -1,6 +1,7 @@
 import getHtmlObject from "../../lib/FactoryHtml";
 import theadTable from "./theadTable";
 import bodyTable from "./bodyTable";
+import btnAddNewUser from "./btnAddNewUser";
 
 import users from "../../users";
 // import './style.scss';
@@ -11,7 +12,7 @@ const table = getHtmlObject("table");
 const tableUser = table.createHtmlElement(
     "table table-striped",
     null,
-    [theadTable(),bodyTable(users)]
+    [btnAddNewUser,theadTable(),bodyTable(users)]
 );
 
 const tableDiv = div.createHtmlElement(
@@ -21,5 +22,9 @@ const tableDiv = div.createHtmlElement(
 );
 
 export default tableDiv;
+
+
+
+
 
 

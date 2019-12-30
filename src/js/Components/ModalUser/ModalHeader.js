@@ -1,4 +1,5 @@
 import getHtmlObject from "../../lib/FactoryHtml";
+import actionModalClose from "../../Actions/TableUsers/actionModalClose";
 
 const div = getHtmlObject("div");
 const h5 = getHtmlObject("h5");
@@ -9,8 +10,7 @@ const span = getHtmlObject("span");
 const ariaHidden = span.createHtmlElement(
     "",
     [
-        {name:"aria-hidden",value:"true"},
-        {name:"id",value:"modalClose"},
+        {name:"aria-hidden",value:"true"}
     ],
     "&times;"
 );
@@ -20,6 +20,7 @@ const btnClose = button.createHtmlElement(
     [
         {name:"data-dismiss",value:"modal"},
         {name:"aria-label",value:"Close"},
+        {name:"id",value:"modalCloseX"},
     ],
     [ariaHidden]
 );
