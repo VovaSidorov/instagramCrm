@@ -18,6 +18,8 @@ import Tr from "./Tr";
 import Th from "./Th";
 import Tbody from "./Tbody";
 import Td from "./Td";
+import Select from "./Select";
+import Option from "./Option"
 
 export default function (tag) {
     switch (tag) {
@@ -58,7 +60,11 @@ export default function (tag) {
         case "tbody":
             return new Tbody();
         case "td":
-            return new Td();                  
+            return new Td();
+        case "select":
+            return new Select();
+        case "option":
+            return new Option();
         default:
             return new Div();
     }
